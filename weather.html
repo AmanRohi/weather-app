@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="weather.css">
+    <script src="https://kit.fontawesome.com/a97f35ca56.js" crossorigin="anonymous"></script>
+    <title>Weather</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper-part">
+            <div class="details">
+                <div class="location">
+                    <i class="fas fa-street-view"></i> India
+                    <span class="code"></span>
+                </div>
+                <div class="search">
+                    <input id="search-text" type="text" placeholder="Place ... " required>
+                    <div class="search-btn">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="details">
+                <div class="Current-date">
+                    <div class="current-temp"><span id="cr-temp">25</span> &#8451;</div>
+                    <div class="current-temp" id="type-weather"></div>
+                    <div class="date-day">
+                        <div class="date">
+                            <div id="dd">16</div>
+                            <div id="month"></div>
+                            <div id="year">2021</div>
+                        </div>
+                        <div class="day">Tuesday</div>
+                    </div>
+                    <div class="overall-time">
+                        <div class="time">
+                            <span id="first">02</span>
+                            <span>:</span>
+                            <span id="last">53</span>
+                        </div>
+                        <div class="am-pm">PM</div>
+                    </div>
+
+                </div>
+                <div class="weather-details-outer-div">
+                    <div class="weather-details">
+                        <div class="wrt">Feels Like : </div>
+                        <div class="feels">11222</div> &#8451;
+                    </div>
+                    <div class="weather-details">
+                        <div class="wrt">humidity : </div>
+                        <div class="humidity">11222</div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="wrt">Pressure : </div>
+                        <div class="pressure">555555</div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="wrt">Wind Speed : </div>
+                        <div class="wind-speed">888888</div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="wrt">Sunrise : </div>
+                        <div class="sunrise">888555</div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="wrt">Sun Set : </div>
+                        <div class="sun-set">22222</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="lower-part">
+            <div class="today-w">
+                <div class="img-container">
+                    <img id="img" alt="weather">
+                </div>
+                <div class="alternate">
+                    <div id="day" class="fetch-day"></div>
+                    <div class="temperatures">
+                        <div class="temp">
+                            Min <span class='min'>23</span> &#8451;
+                        </div>
+                        <div class="temp">
+                            Max <span class="max">23</span> &#8451;
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="other-days">
+                <div class="other-days-parts"></div>
+                <div class="other-days-parts"></div>
+                <div class="other-days-parts"></div>
+                <div class="other-days-parts"></div>
+                <div class="other-days-parts"></div>
+                <div class="other-days-parts"></div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+            integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="weather.js"></script>
+</body>
+
+</html>

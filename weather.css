@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  font-size: 16px;
+}
+body {
+  /* background-image: url("https://images.unsplash.com/photo-1621274403997-37aace184f49?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1"); */
+  background-image: url("background-imgae.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: "ubuntu";
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.upper-part {
+  padding: 2em 3.5em 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.location {
+  font-size: 3rem;
+}
+.location i {
+  font-size: 2rem;
+}
+.code {
+  font-size: 2rem;
+}
+.search {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.search-btn {
+  font-size: 2rem;
+  padding: 0.3em;
+  border-radius: 50%;
+  transition: all 500ms ease-in-out;
+}
+.search-btn:hover {
+  box-shadow: 0px 0px 4px 2px rgba(15, 10, 10, 0.5);
+  cursor: pointer;
+  transform: scale(1.1);
+}
+#search-text {
+  outline: none;
+  padding-left: 0.9em;
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  height: 2.5rem;
+  font-size: 1.2rem;
+  color: white;
+  font-family: ubuntu;
+  text-transform: capitalize;
+}
+#type-weather {
+  font-size: 2rem;
+}
+
+/* upper-part second section */
+
+.weather-details-outer-div {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 1em;
+  border-radius: 20px;
+  font-size: 1.8rem;
+  width: 20rem;
+  height: 20rem;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto condensed";
+}
+.weather-details {
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Date and time and temperature decoration */
+.current-temp {
+  font-size: 4rem;
+  font-family: "Comfortaa";
+  color: white;
+}
+.date-day {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.51rem;
+  flex-direction: column;
+  font-size: 3rem;
+}
+.date {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* Styling the timer stamp */
+
+.overall-time {
+  font-size: 2rem;
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* weather forcasting for the next 7 days */
+
+.lower-part {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 2em 2em;
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+}
+.today-w {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 0.5rem;
+  border-radius: 20px;
+  display: flex;
+  gap: 1rem;
+  width: 25rem;
+  height: 13rem;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2rem;
+  transform: scale(1.3);
+  border: 1px solid white;
+}
+.img-container {
+  width: 8rem;
+}
+.img-container2 {
+  width: 5rem;
+  /* height: 2rem; */
+}
+#img {
+  width: 100%;
+  height: 100%;
+}
+.img-week {
+  width: 100%;
+  height: 100%;
+}
+.alternate {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.other-days {
+  display: flex;
+  gap: 1.5rem;
+  margin-left: 2rem;
+  height: 13rem;
+  color: white;
+  /* overflow: auto; */
+  width: 100%;
+  height: 19rem;
+  padding: 2rem;
+}
+.other-days-parts {
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 15px;
+  transition: transform 250ms ease-in-out;
+  width: 11rem;
+  border: 1px solid white;
+}
+.other-days-parts:hover {
+  transform: scale(1.2);
+}
+#day {
+  font-size: 1.2rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.7rem 1.7rem;
+  border-radius: 20px;
+  width: fit-content;
+}
+.temperatures {
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+::placeholder {
+  font-size: 1.2rem;
+  font-family: ubuntu;
+  color: yellow;
+  padding: 1.2rem;
+}
+
+@media (max-width: 900px) {
+  .lower-part,
+  .other-days {
+    flex-direction: column;
+    align-items: center;
+  }
+  .lower-part {
+    justify-content: center;
+    /* padding-top: ; */
+  }
+  .other-days-parts {
+    width: 26rem;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: lightgrey;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: linear-gradient(lightblue, blue);
+}
+::-webkit-scrollbar-corner {
+  background: lightgrey;
+}
