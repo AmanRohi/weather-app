@@ -84,15 +84,12 @@ function callWeatherAPI(city) {
 }
 function showWeatherDetails(weatherReport) {
   console.log(weatherReport);
-  currentTemp.innerText = weatherReport.main.temp;
   humidity.innerText = weatherReport.main.humidity + "%";
   pressure.innerText = weatherReport.main.pressure + " mbar";
   windSpeed.innerText = weatherReport.wind.speed + " mps";
   sunrise.innerText = window.moment(weatherReport.sys.sunrise * 1000).format("HH:MM a");
   sunset.innerText = window.moment(weatherReport.sys.sunset * 1000).format("HH:MM a");
   todayImg.setAttribute("src", imgUrl1 + weatherReport.weather[0].icon + imgUrl3);
-  min.innerText = weatherReport.main.temp_min;
-  max.innerText = weatherReport.main.temp_max;
   position.innerHTML = `<i class="fas fa-street-view"></i> ${weatherReport.name}
   | <span class="code">${weatherReport.sys.country}</span>`;
   feels.innerText = weatherReport.main.feels_like;
@@ -113,6 +110,9 @@ const otherParts = document.querySelectorAll(".other-days-parts");
 
 function wholeWeek(weatherReport) {
   console.log(weatherReport);
+  currentTemp.innerText = weatherReport.current.temp;
+  min.innerText = weatherReport.daily[0].temp.min;
+  max.innerText = weatherReport.daily[0].temp.max;
   let i = 1;
   let today = new Date();
   let t = today.getDay() + 1;
@@ -141,6 +141,6 @@ btn.addEventListener("click", () => {
   else callWeatherAPI(place);
 });
 val.addEventListener("keypress", (e) => {
-  if(e.key==="Enter") btn.click();
+  if (e.key === "Enter") btn.click();
 });
 callWeatherAPI("delhi");
